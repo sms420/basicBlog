@@ -1,26 +1,12 @@
-<h1>Listing posts</h1>
-
-<table>
-  <tr>
-    <th>Id</th>
-    <th>Title</th>
-    <th>Content</th>    
-    <th>View</th>        
-  </tr>
-   
+<div id="recentPosts">   
+	<h1>Recent Posts</h1> (<%= link_to 'create new', new_post_path %>)
 <% for post in @recentPosts %>
-  <tr>
-    <!--<td><% for foo in post.methods %><%= foo %><br/><% end %></td>-->
-    <td><%=h post.id %> : </td>
-    <td><%=h post.title %> : </td>
-    <td><%= post.content %></td>
-    <td><%= link_to 'Show', post %></td>
-    <!--<td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>-->
-  </tr>
+  <div class="blogPost">
+    <h2><%= link_to post.title, post %></h2>
+    <div class="blogContent"><%= post.content %></div>
+    <!--<%=  link_to 'Edit', edit_post_path(post) %>
+    <%=  link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>-->
+  </div>
 <% end %>
-</table>
+<div>
 
-<br />
-
-<%= link_to 'New post', new_post_path %>

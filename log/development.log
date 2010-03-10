@@ -5453,3 +5453,737 @@ c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
 Rendering template within layouts/posts
 Rendering posts/index
 Completed in 0.01999 (50 reqs/sec) | Rendering: 0.00871 (43%) | DB: 0.00205 (10%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:05:18) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;35;1mPost Load (0.001381)[0m   [0mSELECT * FROM "posts" [0m
+  [4;36;1mPost Load (0.000664)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+ERROR: compiling _run_erb_47app47views47posts47index46html46erb RAISED compile error
+/Users/apple/Desktop/basicBlog/app/views/posts/index.html.erb:11: syntax error, unexpected kEND, expecting ')'
+;  end ; _erbout.concat "\n<div>\n"
+      ^
+/Users/apple/Desktop/basicBlog/app/views/posts/index.html.erb:15: syntax error, unexpected kEND, expecting ')'
+Function body: def _run_erb_47app47views47posts47index46html46erb(local_assigns)
+_erbout = ''; _erbout.concat "<h1>Listing posts</h1>\n\n<div id=\"recentPosts\">   \n"
+
+
+;  for post in @recentPosts ; _erbout.concat "\n  <div class=\"blogPost\">\n    <h2>"
+
+; _erbout.concat(( link_to post.title, post ).to_s); _erbout.concat "</h2>\n    <p>"
+; _erbout.concat(( post.content ).to_s); _erbout.concat "</p>\n    "
+; _erbout.concat(( # link_to 'Edit', edit_post_path(post) ).to_s); _erbout.concat "\n    "
+; _erbout.concat(( # link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete ).to_s); _erbout.concat "\n  </div>\n"
+
+;  end ; _erbout.concat "\n<div>\n"
+
+; _erbout.concat(( link_to 'New post', new_post_path ).to_s); _erbout.concat "\n"
+; _erbout
+end
+Backtrace: /Users/apple/Desktop/basicBlog/app/views/posts/index.html.erb:15:in `compile_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:55:in `prepare!'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:34:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:22:in `render_template'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:245:in `render_file'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1108:in `render_for_file'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:865:in `render_with_no_layout'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:880:in `render_with_no_layout'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:131:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:131:in `custom'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:160:in `call'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:160:in `respond'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:154:in `each'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:154:in `respond'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/apple/Desktop/basicBlog/app/controllers/posts_controller.rb:8:in `index'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+/usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+/usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/webrick_server.rb:112:in `handle_dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/webrick_server.rb:78:in `service'
+/usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/usr/local/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/webrick_server.rb:62:in `dispatch'
+/usr/local/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/webrick.rb:66
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+/usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+/usr/local/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+/Users/apple/Desktop/basicBlog/app/views/posts/index.html.erb:11: syntax error, unexpected kEND, expecting ')'
+;  end ; _erbout.concat "\n<div>\n"
+      ^
+/Users/apple/Desktop/basicBlog/app/views/posts/index.html.erb:15: syntax error, unexpected kEND, expecting ')') on line #11 of posts/index.html.erb:
+8:     <%= # link_to 'Edit', edit_post_path(post) %>
+9:     <%= # link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
+10:   </div>
+11: <% end %>
+12: <div>
+13: <%= link_to 'New post', new_post_path %>
+
+    app/views/posts/index.html.erb:15:in `compile_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:55:in `prepare!'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:34:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:22:in `render_template'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:245:in `render_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1108:in `render_for_file'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:865:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:880:in `render_with_no_layout'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:131:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:131:in `custom'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:160:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:160:in `respond'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:154:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:154:in `respond'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/posts_controller.rb:8:in `index'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/webrick_server.rb:78:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/webrick_server.rb:62:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:06:42) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;35;1mPost Load (0.001331)[0m   [0mSELECT * FROM "posts" [0m
+  [4;36;1mPost Load (0.000641)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01643 (60 reqs/sec) | Rendering: 0.00546 (33%) | DB: 0.00197 (12%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:07:24) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;35;1mPost Load (0.001351)[0m   [0mSELECT * FROM "posts" [0m
+  [4;36;1mPost Load (0.000637)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01684 (59 reqs/sec) | Rendering: 0.00577 (34%) | DB: 0.00199 (11%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:08:00) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;35;1mPost Load (0.001355)[0m   [0mSELECT * FROM "posts" [0m
+  [4;36;1mPost Load (0.000652)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01732 (57 reqs/sec) | Rendering: 0.00562 (32%) | DB: 0.00201 (11%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-03-10 01:08:13) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"posts"}
+  [4;35;1mPost Load (0.000402)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 8) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 0.01320 (75 reqs/sec) | Rendering: 0.00286 (21%) | DB: 0.00040 (3%) | 200 OK [http://localhost/posts/8]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-03-10 01:08:20) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"posts"}
+  [4;36;1mPost Load (0.000365)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 8) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 0.01283 (77 reqs/sec) | Rendering: 0.00229 (17%) | DB: 0.00036 (2%) | 200 OK [http://localhost/posts/8]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-03-10 01:08:31) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"show", "id"=>"9", "controller"=>"posts"}
+  [4;35;1mPost Load (0.000385)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 9) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 0.01251 (79 reqs/sec) | Rendering: 0.00224 (17%) | DB: 0.00039 (3%) | 200 OK [http://localhost/posts/9]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:09:32) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001345)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000635)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01660 (60 reqs/sec) | Rendering: 0.00551 (33%) | DB: 0.00198 (11%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:10:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001350)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000665)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01669 (59 reqs/sec) | Rendering: 0.00566 (33%) | DB: 0.00202 (12%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:10:30) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001360)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000657)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01671 (59 reqs/sec) | Rendering: 0.00559 (33%) | DB: 0.00202 (12%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:11:06) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001358)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000632)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01667 (59 reqs/sec) | Rendering: 0.00546 (32%) | DB: 0.00199 (11%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:11:35) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001336)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000631)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01743 (57 reqs/sec) | Rendering: 0.00648 (37%) | DB: 0.00197 (11%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:11:48) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001338)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000643)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01670 (59 reqs/sec) | Rendering: 0.00557 (33%) | DB: 0.00198 (11%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:13:03) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001362)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000664)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.07757 (12 reqs/sec) | Rendering: 0.06647 (85%) | DB: 0.00203 (2%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:14:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001349)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000642)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01675 (59 reqs/sec) | Rendering: 0.00563 (33%) | DB: 0.00199 (11%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:14:32) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001435)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000662)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.02003 (49 reqs/sec) | Rendering: 0.00761 (38%) | DB: 0.00210 (10%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:14:46) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001383)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000737)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01682 (59 reqs/sec) | Rendering: 0.00558 (33%) | DB: 0.00212 (12%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:15:52) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001347)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000642)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01739 (57 reqs/sec) | Rendering: 0.00630 (36%) | DB: 0.00199 (11%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:16:23) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001390)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000648)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01680 (59 reqs/sec) | Rendering: 0.00563 (33%) | DB: 0.00204 (12%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:16:44) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001379)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000658)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01690 (59 reqs/sec) | Rendering: 0.00586 (34%) | DB: 0.00204 (12%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:17:00) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001352)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000640)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01682 (59 reqs/sec) | Rendering: 0.00572 (34%) | DB: 0.00199 (11%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:19:09) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001378)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000676)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01730 (57 reqs/sec) | Rendering: 0.00577 (33%) | DB: 0.00205 (11%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:19:18) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001361)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000633)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01723 (58 reqs/sec) | Rendering: 0.00623 (36%) | DB: 0.00199 (11%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:20:08) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001386)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000639)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01743 (57 reqs/sec) | Rendering: 0.00583 (33%) | DB: 0.00203 (11%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:20:20) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001347)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000634)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01674 (59 reqs/sec) | Rendering: 0.00567 (33%) | DB: 0.00198 (11%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:20:29) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001330)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000634)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01652 (60 reqs/sec) | Rendering: 0.00557 (33%) | DB: 0.00196 (11%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:20:37) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001351)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000638)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01661 (60 reqs/sec) | Rendering: 0.00566 (34%) | DB: 0.00199 (11%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:20:45) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001420)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000660)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01699 (58 reqs/sec) | Rendering: 0.00571 (33%) | DB: 0.00208 (12%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:20:52) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001352)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000664)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01660 (60 reqs/sec) | Rendering: 0.00563 (33%) | DB: 0.00202 (12%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:21:07) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001421)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000655)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01690 (59 reqs/sec) | Rendering: 0.00562 (33%) | DB: 0.00208 (12%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:21:14) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001350)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000644)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01697 (58 reqs/sec) | Rendering: 0.00570 (33%) | DB: 0.00199 (11%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:22:34) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001363)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000669)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01677 (59 reqs/sec) | Rendering: 0.00561 (33%) | DB: 0.00203 (12%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:23:12) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001361)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000633)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.07724 (12 reqs/sec) | Rendering: 0.06608 (85%) | DB: 0.00199 (2%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:23:25) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001353)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000635)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01675 (59 reqs/sec) | Rendering: 0.00565 (33%) | DB: 0.00199 (11%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:23:34) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001355)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000640)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01816 (55 reqs/sec) | Rendering: 0.00632 (34%) | DB: 0.00199 (10%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:23:37) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001360)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000666)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01639 (61 reqs/sec) | Rendering: 0.00497 (30%) | DB: 0.00203 (12%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:23:47) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001375)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000659)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.08493 (11 reqs/sec) | Rendering: 0.00621 (7%) | DB: 0.00203 (2%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:23:56) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001339)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000647)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01669 (59 reqs/sec) | Rendering: 0.00564 (33%) | DB: 0.00199 (11%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:24:14) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.001349)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.000720)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01765 (56 reqs/sec) | Rendering: 0.00570 (32%) | DB: 0.00207 (11%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-03-10 01:24:19) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"show", "id"=>"9", "controller"=>"posts"}
+  [4;36;1mPost Load (0.000361)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 9) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 0.01282 (77 reqs/sec) | Rendering: 0.00233 (18%) | DB: 0.00036 (2%) | 200 OK [http://localhost/posts/9]
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2010-03-10 01:24:21) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"action"=>"edit", "id"=>"9", "controller"=>"posts"}
+  [4;35;1mPost Load (0.000349)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 9) [0m
+Rendering template within layouts/posts
+Rendering posts/edit
+Completed in 0.07480 (13 reqs/sec) | Rendering: 0.06522 (87%) | DB: 0.00035 (0%) | 200 OK [http://localhost/posts/9/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-10 01:24:22) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/posts/9/css/content.css" with {:method=>:get}):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/recognition_optimisation.rb:67:in `recognize_path'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/routing/route_set.rb:384:in `recognize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:148:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/webrick_server.rb:112:in `handle_dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/webrick_server.rb:78:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/local/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/local/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/webrick_server.rb:62:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing PostsController#update (for 127.0.0.1 at 2010-03-10 01:24:31) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7AAY6CkB1c2VkewA=--caf2771cc97892e56e859ae3a2f5407e470c12c6
+  Parameters: {"commit"=>"Update", "post"=>{"title"=>"My Cool Post", "content"=>"<p>You can edit your post and put in anything ...</p>"}, "authenticity_token"=>"10a23b122b7623a7e82cf633d3971cdd38d62485", "_method"=>"put", "action"=>"update", "id"=>"9", "controller"=>"posts"}
+  [4;36;1mPost Load (0.000424)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 9) [0m
+  [4;35;1mPost Update (0.000474)[0m   [0mUPDATE "posts" SET "updated_at" = '2010-03-10 09:24:31', "title" = 'My Cool Post' WHERE "id" = 9[0m
+Redirected to http://localhost:3000/posts/9
+Completed in 0.01543 (64 reqs/sec) | DB: 0.00090 (5%) | 302 Found [http://localhost/posts/9]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-03-10 01:24:31) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiNQb3N0IHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRlZC4G
+OgpAdXNlZHsGOwdG--7ebb14a5ac774f9b90b89d00f7e71c5374d0d3d3
+  Parameters: {"action"=>"show", "id"=>"9", "controller"=>"posts"}
+  [4;36;1mPost Load (0.000742)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 9) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 0.01981 (50 reqs/sec) | Rendering: 0.00257 (12%) | DB: 0.00074 (3%) | 200 OK [http://localhost/posts/9]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 01:24:33) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlOWQ3MTU3NDU3OTdkNGViOGZhOGYxZWRlYWUwMmUx
+NWEiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh
+c2h7BjoLbm90aWNlIiNQb3N0IHdhcyBzdWNjZXNzZnVsbHkgdXBkYXRlZC4G
+OgpAdXNlZHsGOwdU--dd0aa4b0c4ccd59eecd0f56a54c960809eb1d164
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;35;1mPost Load (0.001377)[0m   [0mSELECT * FROM "posts" [0m
+  [4;36;1mPost Load (0.000648)[0m   [0;1mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.01622 (61 reqs/sec) | Rendering: 0.00488 (30%) | DB: 0.00203 (12%) | 200 OK [http://localhost/posts]
