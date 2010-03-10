@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Posts: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'scaffold' %>
+  <script type="text/javascript" src="/jscripts/tiny_mce/tiny_mce.js"></script>
+  <script type="text/javascript" src="/jscripts/tiny_mce/tiny_mce_sms420.js"></script>
+  <style type="text/css">
+    table tr td {border: 1px solid black}
+  </style>
+</head>
+<body style="background-color: #edf0f3">
+<div style="border: 3px dashed #ccc; width: 100%; height: 50px; text-align: center;">
+  <h1>welcome</h1>
+</div>
+
+<p style="color: green"><%= flash[:notice] %></p>
+
+<%= yield  %>
+
+</body>
+</html>
