@@ -8,25 +8,17 @@
     <th>View</th>        
   </tr>
    
-<% 
-  postTotal = @posts.length
-  postCount = 0
-  for post in @posts.reverse
-     postCount += 1
-     if postCount <= 3
-      %>
-        <tr>
-          <!--<td><% for foo in post.methods %><%= foo %><br/><% end %></td>-->
-          <td><%=h post.id %> : </td>
-          <td><%=h post.title %> : </td>
-          <td><%= post.content %></td>
-          <td><%= link_to 'Show', post %></td>
-          <!--<td><%= link_to 'Edit', edit_post_path(post) %></td>
-          <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>-->
-        </tr>
-      <% 
-    end
-  end %>
+<% for post in @recentPosts %>
+  <tr>
+    <!--<td><% for foo in post.methods %><%= foo %><br/><% end %></td>-->
+    <td><%=h post.id %> : </td>
+    <td><%=h post.title %> : </td>
+    <td><%= post.content %></td>
+    <td><%= link_to 'Show', post %></td>
+    <!--<td><%= link_to 'Edit', edit_post_path(post) %></td>
+    <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>-->
+  </tr>
+<% end %>
 </table>
 
 <br />
