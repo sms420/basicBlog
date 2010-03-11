@@ -6187,3 +6187,13 @@ OgpAdXNlZHsGOwdU--dd0aa4b0c4ccd59eecd0f56a54c960809eb1d164
 Rendering template within layouts/posts
 Rendering posts/index
 Completed in 0.01622 (61 reqs/sec) | Rendering: 0.00488 (30%) | DB: 0.00203 (12%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-10 23:44:31) [GET]
+  Session ID: 891ba4134b9a3d4bcb2578b09b9e23c2
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.003664)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.002088)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.03942 (25 reqs/sec) | Rendering: 0.02005 (50%) | DB: 0.00575 (14%) | 200 OK [http://localhost/posts]
