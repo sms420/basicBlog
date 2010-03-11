@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   # GET /posts.xml
   def index
     @posts = Post.find(:all)
-    @recentPosts = Post.find(:all, :order => "created_at DESC", :limit => 3) #thxG
+    @recentPosts = Post.currentPosts 
     
     respond_to do |format|
       format.html # index.html.erb

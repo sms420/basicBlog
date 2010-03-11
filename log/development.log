@@ -6197,3 +6197,533 @@ Processing PostsController#index (for 127.0.0.1 at 2010-03-10 23:44:31) [GET]
 Rendering template within layouts/posts
 Rendering posts/index
 Completed in 0.03942 (25 reqs/sec) | Rendering: 0.02005 (50%) | DB: 0.00575 (14%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-11 00:13:01) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--da311956cb0b4699558ae08f0421e88428ce279f
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.003811)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mSQL (0.001086)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+NoMethodError (undefined method `currentPosts' for #<Class:0xb707a08c>):
+    /vendor/rails/activerecord/lib/active_record/base.rb:1667:in `method_missing'
+    /app/controllers/posts_controller.rb:6:in `index'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/sean/rails-dev/basicBlog/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-11 00:13:21) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--da311956cb0b4699558ae08f0421e88428ce279f
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.003386)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.002057)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.04717 (21 reqs/sec) | Rendering: 0.02139 (45%) | DB: 0.00544 (11%) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-11 00:15:20) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--da311956cb0b4699558ae08f0421e88428ce279f
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.003419)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mSQL (0.001008)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+NoMethodError (undefined method `currentPosts' for #<Class:0xb6f749d0>):
+    /vendor/rails/activerecord/lib/active_record/base.rb:1667:in `method_missing'
+    /app/controllers/posts_controller.rb:6:in `index'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/sean/rails-dev/basicBlog/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-11 00:16:00) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--da311956cb0b4699558ae08f0421e88428ce279f
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.003721)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mSQL (0.001101)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+NoMethodError (undefined method `currentPosts' for #<Class:0xb6ee6acc>):
+    /vendor/rails/activerecord/lib/active_record/base.rb:1667:in `method_missing'
+    /app/controllers/posts_controller.rb:6:in `index'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/sean/rails-dev/basicBlog/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-11 00:17:11) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--da311956cb0b4699558ae08f0421e88428ce279f
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.003311)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #3 of posts/index.html.erb:
+1: <div id="recentPosts">   
+2: 	<h1>Recent Posts</h1> (<%= link_to 'create new', new_post_path %>)
+3: <% for post in @recentPosts %>
+4:   <div class="blogPost">
+5:     <h2><%= link_to post.title, post %></h2>
+6:     <div class="blogContent"><%= post.content %></div>
+
+    app/views/posts/index.html.erb:3:in `_run_erb_47app47views47posts47index46html46erb'
+    vendor/rails/actionpack/lib/action_view/base.rb:338:in `send'
+    vendor/rails/actionpack/lib/action_view/base.rb:338:in `execute'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:35:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:22:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:245:in `render_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1108:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:865:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/base.rb:880:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:131:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:131:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:160:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:160:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:154:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:154:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/posts_controller.rb:8:in `index'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/sean/rails-dev/basicBlog/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-11 00:17:46) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--da311956cb0b4699558ae08f0421e88428ce279f
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;35;1mPost Load (0.003424)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #3 of posts/index.html.erb:
+1: <div id="recentPosts">   
+2: 	<h1>Recent Posts</h1> (<%= link_to 'create new', new_post_path %>)
+3: <% for post in @recentPosts %>
+4:   <div class="blogPost">
+5:     <h2><%= link_to post.title, post %></h2>
+6:     <div class="blogContent"><%= post.content %></div>
+
+    app/views/posts/index.html.erb:3:in `_run_erb_47app47views47posts47index46html46erb'
+    vendor/rails/actionpack/lib/action_view/base.rb:338:in `send'
+    vendor/rails/actionpack/lib/action_view/base.rb:338:in `execute'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    vendor/rails/actionpack/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:35:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:22:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:245:in `render_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1108:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:865:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/base.rb:880:in `render_with_no_layout'
+    vendor/rails/actionpack/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:131:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:131:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:160:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:160:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:154:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:154:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/posts_controller.rb:8:in `index'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/sean/rails-dev/basicBlog/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-11 00:17:53) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--da311956cb0b4699558ae08f0421e88428ce279f
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.003547)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mSQL (0.001282)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+NoMethodError (undefined method `currentPosts' for #<Class:0xb714f624>):
+    /vendor/rails/activerecord/lib/active_record/base.rb:1667:in `method_missing'
+    /app/controllers/posts_controller.rb:6:in `index'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/sean/rails-dev/basicBlog/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-11 00:18:25) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--da311956cb0b4699558ae08f0421e88428ce279f
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+
+
+SyntaxError (/home/sean/rails-dev/basicBlog/app/models/post.rb:7: syntax error, unexpected kEND, expecting $end):
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:215:in `load_without_new_constant_marking'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:215:in `load_file'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:214:in `load_file'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:95:in `require_or_load'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:260:in `load_missing_constant'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:467:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:479:in `const_missing'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:272:in `load_missing_constant'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:483:in `const_missing'
+    /app/controllers/posts_controller.rb:5:in `index'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:580:in `call_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /vendor/rails/actionpack/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    /vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    /vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `send'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:529:in `process_without_filters'
+    /vendor/rails/actionpack/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    /vendor/rails/actionpack/lib/action_controller/session_management.rb:130:in `process'
+    /vendor/rails/actionpack/lib/action_controller/base.rb:389:in `process'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    /vendor/rails/actionpack/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:112:in `handle_dispatch'
+    /vendor/rails/railties/lib/webrick_server.rb:78:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /vendor/rails/railties/lib/webrick_server.rb:62:in `dispatch'
+    /vendor/rails/railties/lib/commands/servers/webrick.rb:66
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    /vendor/rails/activesupport/lib/active_support/dependencies.rb:509:in `require'
+    /vendor/rails/railties/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /home/sean/rails-dev/basicBlog/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-11 00:22:16) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo
+SGFzaHsABjoKQHVzZWR7AA==--da311956cb0b4699558ae08f0421e88428ce279f
+  Parameters: {"action"=>"index", "controller"=>"posts"}
+  [4;36;1mPost Load (0.026096)[0m   [0;1mSELECT * FROM "posts" [0m
+  [4;35;1mPost Load (0.002194)[0m   [0mSELECT * FROM "posts" ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 0.06124 (16 reqs/sec) | Rendering: 0.01269 (20%) | DB: 0.02829 (46%) | 200 OK [http://localhost/posts]
